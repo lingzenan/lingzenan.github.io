@@ -25,32 +25,6 @@ I welcome inquiries from prospective undergraduate, master's, PhD, and visiting 
 - 2026.01: News item or announcement.
 - 2025.12: News item or announcement.
 
-## Publications
-{: #publications }
-
-### Selected Papers
-
-- Author A, **Zenan Ling**, Author C. Paper title. *Conference or Journal*, 2026.
-- **Zenan Ling**, Author B. Paper title. *Conference or Journal*, 2025.
-- Author A, Author B, **Zenan Ling**. Paper title. *Conference or Journal*, 2024.
-
-### Working Papers
-
-- **Zenan Ling**. Working paper title. Under review.
-
-## Projects
-{: #projects }
-
-- **Human-centered AI**: Explainable, controllable, and trustworthy intelligent systems.
-- **Computational Social Science**: Large-scale data and modeling for understanding social behavior.
-- **Interactive Systems**: Human-AI collaboration tools for real-world use contexts.
-
-## Teaching
-{: #teaching }
-
-- 2026 Spring: Course Title, undergraduate / graduate.
-- 2025 Fall: Course Title, undergraduate / graduate.
-
 ## Contact
 {: #contact }
 

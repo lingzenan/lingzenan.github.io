@@ -79,6 +79,11 @@ a:hover {
   color: var(--text);
 }
 
+.nav a[aria-current="page"] {
+  color: var(--text);
+  font-weight: 700;
+}
+
 .page {
   width: min(100% - 40px, var(--max));
   margin: 0 auto;

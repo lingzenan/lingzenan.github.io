@@ -13,13 +13,11 @@
   <body>
     <header class="site-header">
       <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-      <nav class="nav" aria-label="Sections">
-        <a href="#about">About</a>
-        <a href="#news">News</a>
-        <a href="#publications">Publications</a>
-        <a href="#projects">Projects</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#contact">Contact</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
+        <a href="{{ '/publications/' | relative_url }}" {% if page.url == '/publications/' %}aria-current="page"{% endif %}>Publications</a>
+        <a href="{{ '/projects/' | relative_url }}" {% if page.url == '/projects/' %}aria-current="page"{% endif %}>Projects</a>
+        <a href="{{ '/teaching/' | relative_url }}" {% if page.url == '/teaching/' %}aria-current="page"{% endif %}>Teaching</a>
       </nav>
     </header>
 
