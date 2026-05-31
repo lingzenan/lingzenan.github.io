@@ -10,7 +10,6 @@ description: Assistant Professor
     <p>Assistant Professor<br>Research interests: artificial intelligence, computational social science, and human-computer interaction.</p>
     <p class="profile-links">
       Email: <a href="mailto:lingzenan@hust.edu.cn">lingzenan@hust.edu.cn</a><br>
-      Google Scholar: <a href="https://scholar.google.com/citations?user=BabePTkAAAAJ&hl=zh-CN">Profile</a>
     </p>
   </div>
   <img class="profile-photo" src="{{ '/assets/profile-photo.png' | relative_url }}" alt="Portrait of Zenan Ling">
