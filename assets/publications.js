@@ -15,6 +15,22 @@ const conferenceVenues = [
   "acl",
 ];
 
+const venueAbbreviations = [
+  ["international conference on machine learning", "ICML"],
+  ["advances in neural information processing systems", "NeurIPS"],
+  ["conference on neural information processing systems", "NeurIPS"],
+  ["ieee international conference on acoustics, speech and signal processing", "ICASSP"],
+  ["icassp", "ICASSP"],
+  ["proceedings of the aaai conference on artificial intelligence", "AAAI"],
+  ["international conference on artificial intelligence and statistics", "AISTATS"],
+  ["ieee transactions on signal processing", "TSP"],
+  ["ieee transactions on cognitive communications and networking", "TCCN"],
+  ["ieee transactions on antennas and propagation", "TAP"],
+  ["ieee transactions on power systems", "TPS"],
+  ["ieee transactions on pattern analysis and machine intelligence", "TPAMI"],
+  ["ieee transactions on big data", "TBD"],
+];
+
 const escapeHtml = (value) =>
   String(value || "")
     .replaceAll("&", "&amp;")
@@ -149,6 +165,12 @@ const formatMarkedAuthors = (fields) =>
 const venueFor = (entry) =>
   entry.fields.booktitle || entry.fields.journal || entry.fields.publisher || "";
 
+const abbreviationFor = (venue) => {
+  const cleanVenue = String(venue || "").toLowerCase();
+  const matched = venueAbbreviations.find(([name]) => cleanVenue.includes(name));
+  return matched ? matched[1] : "";
+};
+
 const isConference = (entry) => {
   const type = entry.type.toLowerCase();
   const venue = venueFor(entry).toLowerCase();
@@ -163,11 +185,13 @@ const renderEntry = (entry) => {
   const title = escapeHtml(fields.title);
   const venue = escapeHtml(venueFor(entry));
   const year = escapeHtml(fields.year);
+  const abbreviation = escapeHtml(fields.abbr || abbreviationFor(venueFor(entry)));
+  const venueSuffix = abbreviation && year ? ` (${abbreviation} ${year})` : "";
 
   return `
     <li>
       ${authors}. ${title}.
-      <span class="publication-venue"><em>${venue}</em>${year ? `, ${year}` : ""}.</span>
+      <span class="publication-venue"><em>${venue}</em>${venueSuffix}${year && !venueSuffix ? `, ${year}` : ""}.</span>
     </li>
   `;
 };
