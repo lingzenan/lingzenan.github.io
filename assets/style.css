@@ -162,6 +162,22 @@ a:hover {
   margin: 7px 0;
 }
 
+.publication-status {
+  color: var(--muted);
+}
+
+.publication-list {
+  padding-left: 1.25rem;
+}
+
+.publication-list li {
+  margin-bottom: 16px;
+}
+
+.publication-venue {
+  color: var(--muted);
+}
+
 .content strong {
   font-weight: 700;
 }

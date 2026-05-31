@@ -7,12 +7,11 @@ permalink: /publications/
 
 # Publications
 
-## Selected Papers
+<div id="publications-root" class="publication-status">
+  Loading publications...
+</div>
 
-- Author A, **Zenan Ling**, Author C. Paper title. *Conference or Journal*, 2026.
-- **Zenan Ling**, Author B. Paper title. *Conference or Journal*, 2025.
-- Author A, Author B, **Zenan Ling**. Paper title. *Conference or Journal*, 2024.
-
-## Working Papers
-
-- **Zenan Ling**. Working paper title. Under review.
+<script>
+  window.PUBLICATIONS_BIB_URL = "{{ '/publications.bib' | relative_url }}";
+</script>
+<script src="{{ '/assets/publications.js' | relative_url }}"></script>
