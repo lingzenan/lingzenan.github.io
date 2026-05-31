@@ -12,6 +12,6 @@ permalink: /publications/
 </div>
 
 <script>
-  window.PUBLICATIONS_BIB_URL = "{{ '/publications.bib' | relative_url }}";
+  window.PUBLICATIONS_BIB_URL = "{{ '/publications.bib' | relative_url }}?v={{ site.time | date: '%s' }}";
 </script>
-<script src="{{ '/assets/publications.js' | relative_url }}"></script>
+<script src="{{ '/assets/publications.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
