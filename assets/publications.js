@@ -139,11 +139,18 @@ const renderEntry = (entry) => {
   const title = escapeHtml(fields.title);
   const venue = escapeHtml(venueFor(entry));
   const year = escapeHtml(fields.year);
+  const notes = [];
+
+  if (fields.contribution) notes.push(escapeHtml(fields.contribution));
+  if (["true", "yes", "1"].includes(String(fields.corresponding).toLowerCase())) {
+    notes.push("corresponding author");
+  }
 
   return `
     <li>
       ${authors}. ${title}.
       <span class="publication-venue"><em>${venue}</em>${year ? `, ${year}` : ""}.</span>
+      ${notes.length ? `<span class="publication-note">${notes.join("; ")}.</span>` : ""}
     </li>
   `;
 };
