@@ -8,6 +8,10 @@ description: Assistant Professor
   <div class="profile-intro">
     <h1>Zenan Ling</h1>
     <p>Assistant Professor<br>Research interests: artificial intelligence, computational social science, and human-computer interaction.</p>
+    <p class="profile-links">
+      Email: <a href="mailto:lingzenan@hust.edu.cn">lingzenan@hust.edu.cn</a><br>
+      Google Scholar: <a href="https://scholar.google.com/citations?user=BabePTkAAAAJ&hl=zh-CN">Profile</a>
+    </p>
   </div>
   <img class="profile-photo" src="{{ '/assets/profile-photo.png' | relative_url }}" alt="Portrait of Zenan Ling">
 </div>
@@ -24,11 +28,3 @@ I welcome inquiries from prospective undergraduate, master's, PhD, and visiting 
 
 - 2026.01: News item or announcement.
 - 2025.12: News item or announcement.
-
-## Contact
-{: #contact }
-
-- Email: your.name@example.edu
-- Office: Building, Room 000
-- Google Scholar: [Profile link](https://scholar.google.com/)
-- ORCID: [0000-0000-0000-0000](https://orcid.org/)

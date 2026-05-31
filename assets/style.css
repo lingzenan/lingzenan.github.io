@@ -115,6 +115,11 @@ a:hover {
   font-size: 18px;
 }
 
+.profile-links {
+  color: var(--text);
+  font-size: 16px;
+}
+
 .content h2 {
   margin: 52px 0 14px;
   padding-top: 16px;
@@ -134,7 +139,7 @@ a:hover {
 
 .profile-photo {
   flex: 0 0 auto;
-  width: clamp(118px, 18vw, 156px);
+  width: clamp(96px, 14vw, 124px);
   aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: center top;
@@ -213,7 +218,7 @@ a:hover {
   }
 
   .profile-photo {
-    width: 112px;
+    width: 96px;
   }
 }
 
