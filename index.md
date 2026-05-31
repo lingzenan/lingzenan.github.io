@@ -4,12 +4,13 @@ title: Zenan Ling
 description: Assistant Professor
 ---
 
-# Zenan Ling
-
-<img class="profile-photo" src="{{ '/assets/profile-photo.png' | relative_url }}" alt="Portrait of Zenan Ling">
-
-Assistant Professor  
-Research interests: artificial intelligence, computational social science, and human-computer interaction.
+<div class="profile-hero">
+  <div class="profile-intro">
+    <h1>Zenan Ling</h1>
+    <p>Assistant Professor<br>Research interests: artificial intelligence, computational social science, and human-computer interaction.</p>
+  </div>
+  <img class="profile-photo" src="{{ '/assets/profile-photo.png' | relative_url }}" alt="Portrait of Zenan Ling">
+</div>
 
 ## About
 {: #about }
@@ -49,3 +50,11 @@ I welcome inquiries from prospective undergraduate, master's, PhD, and visiting 
 
 - 2026 Spring: Course Title, undergraduate / graduate.
 - 2025 Fall: Course Title, undergraduate / graduate.
+
+## Contact
+{: #contact }
+
+- Email: your.name@example.edu
+- Office: Building, Room 000
+- Google Scholar: [Profile link](https://scholar.google.com/)
+- ORCID: [0000-0000-0000-0000](https://orcid.org/)
