@@ -203,7 +203,7 @@ const renderEntry = (entry) => {
   return `
     <li>
       ${authors}. ${titleHtml}.
-      <span class="publication-venue"><em>${venue}</em>${venueSuffix}${year && !venueSuffix ? `, ${year}` : ""}.</span>
+      <span class="publication-venue"><em>${venue}${venueSuffix}${year && !venueSuffix ? `, ${year}` : ""}</em>.</span>
     </li>
   `;
 };
