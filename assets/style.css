@@ -184,7 +184,7 @@ a.publication-title {
 }
 
 .publication-venue {
-  color: var(--muted);
+  color: var(--text);
 }
 
 .content strong {
@@ -208,6 +208,11 @@ a.publication-title {
 .content em {
   color: var(--muted);
   font-style: normal;
+}
+
+.content .publication-venue em {
+  color: var(--text);
+  font-style: italic;
 }
 
 .content blockquote {
