@@ -197,18 +197,21 @@ const renderEntry = (entry) => {
     hasAbbreviation && abbreviation
       ? venue.replace(new RegExp(`\\s*\\(${abbreviation}\\)`, "i"), "")
       : venue;
-  const venueSuffixText =
-    abbreviation && year
-      ? ` (${escapeHtml(abbreviation)} ${year})`
-      : "";
-  const venueSuffix = venueSuffixText
-    ? `<strong class="publication-abbr">${venueSuffixText}</strong>`
+  const kind = isConference(entry) ? "conference" : "journal";
+  const abbreviationLabel = abbreviation
+    ? kind === "conference"
+      ? `${abbreviation} ${year}`
+      : abbreviation
     : "";
+  const abbreviationHtml = abbreviationLabel
+    ? `, (<strong class="publication-abbr">${escapeHtml(abbreviationLabel)}</strong>)`
+    : "";
+  const yearHtml = year ? `, ${year}` : "";
 
   return `
     <li>
       ${authors}. ${titleHtml}.
-      <span class="publication-venue"><em>${displayVenue}${venueSuffix}${year && !venueSuffix ? `, ${year}` : ""}</em>.</span>
+      <span class="publication-venue"><em>${displayVenue}${abbreviationHtml}${yearHtml}</em>.</span>
     </li>
   `;
 };
