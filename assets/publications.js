@@ -185,8 +185,17 @@ const renderEntry = (entry) => {
   const title = escapeHtml(fields.title);
   const venue = escapeHtml(venueFor(entry));
   const year = escapeHtml(fields.year);
-  const abbreviation = escapeHtml(fields.abbr || abbreviationFor(venueFor(entry)));
-  const venueSuffix = abbreviation && year ? ` (${abbreviation} ${year})` : "";
+  const abbreviation = fields.abbr || abbreviationFor(venueFor(entry));
+  const cleanVenue = String(venueFor(entry)).toLowerCase();
+  const hasAbbreviation = abbreviation
+    ? cleanVenue.includes(`(${abbreviation.toLowerCase()})`)
+    : false;
+  const venueSuffix =
+    abbreviation && year
+      ? hasAbbreviation
+        ? ` ${year}`
+        : ` (${escapeHtml(abbreviation)} ${year})`
+      : "";
 
   return `
     <li>
