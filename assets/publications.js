@@ -183,6 +183,9 @@ const renderEntry = (entry) => {
   const fields = entry.fields;
   const authors = formatMarkedAuthors(fields);
   const title = escapeHtml(fields.title);
+  const titleHtml = fields.url
+    ? `<a class="publication-title" href="${escapeHtml(fields.url)}" target="_blank" rel="noreferrer">${title}</a>`
+    : `<span class="publication-title">${title}</span>`;
   const venue = escapeHtml(venueFor(entry));
   const year = escapeHtml(fields.year);
   const abbreviation = fields.abbr || abbreviationFor(venueFor(entry));
@@ -199,7 +202,7 @@ const renderEntry = (entry) => {
 
   return `
     <li>
-      ${authors}. ${title}.
+      ${authors}. ${titleHtml}.
       <span class="publication-venue"><em>${venue}</em>${venueSuffix}${year && !venueSuffix ? `, ${year}` : ""}.</span>
     </li>
   `;
