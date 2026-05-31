@@ -6,6 +6,10 @@
   --accent: #245f73;
   --soft: #eef5f7;
   --max: 820px;
+  --serif: Charter, "Bitstream Charter", Cambria, Georgia, "Times New Roman",
+    "Noto Serif SC", "Songti SC", SimSun, serif;
+  --sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Noto Sans SC", "Microsoft YaHei", sans-serif;
 }
 
 * {
@@ -20,11 +24,9 @@ body {
   margin: 0;
   color: var(--text);
   background: var(--bg);
-  font-family:
-    ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Noto Sans SC", "Microsoft YaHei", sans-serif;
-  font-size: 16px;
-  line-height: 1.72;
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.76;
 }
 
 a {
@@ -53,6 +55,7 @@ a:hover {
 
 .brand {
   color: var(--text);
+  font-family: var(--sans);
   font-weight: 700;
   text-decoration: none;
   white-space: nowrap;
@@ -63,6 +66,7 @@ a:hover {
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 6px 18px;
+  font-family: var(--sans);
   font-size: 14px;
 }
 
@@ -98,6 +102,7 @@ a:hover {
   margin: 52px 0 14px;
   padding-top: 16px;
   border-top: 1px solid var(--line);
+  font-family: var(--sans);
   font-size: 22px;
   line-height: 1.25;
   letter-spacing: 0;
@@ -105,8 +110,20 @@ a:hover {
 
 .content h3 {
   margin: 28px 0 8px;
+  font-family: var(--sans);
   font-size: 17px;
   line-height: 1.35;
+}
+
+.profile-photo {
+  float: right;
+  width: clamp(150px, 24vw, 210px);
+  aspect-ratio: 4 / 5;
+  margin: 2px 0 22px 34px;
+  object-fit: cover;
+  object-position: center top;
+  border: 1px solid var(--line);
+  background: #fff;
 }
 
 .content p,
@@ -153,6 +170,7 @@ a:hover {
   padding: 24px 0 36px;
   color: var(--muted);
   border-top: 1px solid var(--line);
+  font-family: var(--sans);
   font-size: 14px;
 }
 
@@ -171,5 +189,12 @@ a:hover {
   .page {
     width: min(100% - 32px, var(--max));
     padding-top: 36px;
+  }
+
+  .profile-photo {
+    float: none;
+    display: block;
+    width: min(210px, 68vw);
+    margin: 8px 0 22px;
   }
 }
