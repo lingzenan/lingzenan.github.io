@@ -215,6 +215,10 @@ a.publication-title {
   font-style: italic;
 }
 
+.publication-abbr {
+  font-weight: 700;
+}
+
 .content blockquote {
   margin: 18px 0;
   padding: 12px 18px;

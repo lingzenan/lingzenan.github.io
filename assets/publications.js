@@ -193,12 +193,15 @@ const renderEntry = (entry) => {
   const hasAbbreviation = abbreviation
     ? cleanVenue.includes(`(${abbreviation.toLowerCase()})`)
     : false;
-  const venueSuffix =
+  const venueSuffixText =
     abbreviation && year
       ? hasAbbreviation
         ? ` ${year}`
         : ` (${escapeHtml(abbreviation)} ${year})`
       : "";
+  const venueSuffix = venueSuffixText
+    ? `<strong class="publication-abbr">${venueSuffixText}</strong>`
+    : "";
 
   return `
     <li>
