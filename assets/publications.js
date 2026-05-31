@@ -204,7 +204,7 @@ const renderEntry = (entry) => {
       : abbreviation
     : "";
   const abbreviationHtml = abbreviationLabel
-    ? `, (<strong class="publication-abbr">${escapeHtml(abbreviationLabel)}</strong>)`
+    ? ` (<strong class="publication-abbr">${escapeHtml(abbreviationLabel)}</strong>)`
     : "";
   const yearHtml = year ? `, ${year}` : "";
 
