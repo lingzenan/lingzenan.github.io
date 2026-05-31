@@ -122,6 +122,30 @@ const formatAuthors = (authors) =>
     )
     .join(", ");
 
+const authorMarks = (fields) => {
+  const marks = [];
+  const contribution = String(fields.contribution || "").toLowerCase();
+
+  if (contribution.includes("co-first")) marks.push("*");
+  if (["true", "yes", "1"].includes(String(fields.corresponding).toLowerCase())) {
+    marks.push("#");
+  }
+
+  return marks.length ? `<sup>${marks.join("")}</sup>` : "";
+};
+
+const formatMarkedAuthors = (fields) =>
+  String(fields.author || "")
+    .split(/\s+and\s+/i)
+    .map(formatAuthor)
+    .map((author) => {
+      if (author.toLowerCase() === "zenan ling") {
+        return `<strong>Zenan Ling</strong>${authorMarks(fields)}`;
+      }
+      return escapeHtml(author);
+    })
+    .join(", ");
+
 const venueFor = (entry) =>
   entry.fields.booktitle || entry.fields.journal || entry.fields.publisher || "";
 
@@ -135,22 +159,15 @@ const isConference = (entry) => {
 
 const renderEntry = (entry) => {
   const fields = entry.fields;
-  const authors = formatAuthors(fields.author);
+  const authors = formatMarkedAuthors(fields);
   const title = escapeHtml(fields.title);
   const venue = escapeHtml(venueFor(entry));
   const year = escapeHtml(fields.year);
-  const notes = [];
-
-  if (fields.contribution) notes.push(escapeHtml(fields.contribution));
-  if (["true", "yes", "1"].includes(String(fields.corresponding).toLowerCase())) {
-    notes.push("corresponding author");
-  }
 
   return `
     <li>
       ${authors}. ${title}.
       <span class="publication-venue"><em>${venue}</em>${year ? `, ${year}` : ""}.</span>
-      ${notes.length ? `<span class="publication-note">${notes.join("; ")}.</span>` : ""}
     </li>
   `;
 };
@@ -186,6 +203,7 @@ fetch(window.PUBLICATIONS_BIB_URL)
     root.innerHTML = [
       renderGroup("Conference", conferences),
       renderGroup("Journals", journals),
+      '<p class="publication-legend"><sup>*</sup> co-first author. <sup>#</sup> corresponding author.</p>',
     ].join("");
   })
   .catch(() => {
