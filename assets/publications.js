@@ -193,11 +193,13 @@ const renderEntry = (entry) => {
   const hasAbbreviation = abbreviation
     ? cleanVenue.includes(`(${abbreviation.toLowerCase()})`)
     : false;
+  const displayVenue =
+    hasAbbreviation && abbreviation
+      ? venue.replace(new RegExp(`\\s*\\(${abbreviation}\\)`, "i"), "")
+      : venue;
   const venueSuffixText =
     abbreviation && year
-      ? hasAbbreviation
-        ? ` ${year}`
-        : ` (${escapeHtml(abbreviation)} ${year})`
+      ? ` (${escapeHtml(abbreviation)} ${year})`
       : "";
   const venueSuffix = venueSuffixText
     ? `<strong class="publication-abbr">${venueSuffixText}</strong>`
@@ -206,7 +208,7 @@ const renderEntry = (entry) => {
   return `
     <li>
       ${authors}. ${titleHtml}.
-      <span class="publication-venue"><em>${venue}${venueSuffix}${year && !venueSuffix ? `, ${year}` : ""}</em>.</span>
+      <span class="publication-venue"><em>${displayVenue}${venueSuffix}${year && !venueSuffix ? `, ${year}` : ""}</em>.</span>
     </li>
   `;
 };
