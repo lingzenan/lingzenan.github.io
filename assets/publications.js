@@ -23,12 +23,12 @@ const venueAbbreviations = [
   ["icassp", "ICASSP"],
   ["proceedings of the aaai conference on artificial intelligence", "AAAI"],
   ["international conference on artificial intelligence and statistics", "AISTATS"],
-  ["ieee transactions on signal processing", "TSP"],
-  ["ieee transactions on cognitive communications and networking", "TCCN"],
-  ["ieee transactions on antennas and propagation", "TAP"],
-  ["ieee transactions on power systems", "TPS"],
-  ["ieee transactions on pattern analysis and machine intelligence", "TPAMI"],
-  ["ieee transactions on big data", "TBD"],
+  ["ieee transactions on signal processing", "IEEE-TSP"],
+  ["ieee transactions on cognitive communications and networking", "IEEE-TCCN"],
+  ["ieee transactions on antennas and propagation", "IEEE-TAP"],
+  ["ieee transactions on power systems", "IEEE-TPWRS"],
+  ["ieee transactions on pattern analysis and machine intelligence", "IEEE-TPAMI"],
+  ["ieee transactions on big data", "IEEE-TBD"],
 ];
 
 const escapeHtml = (value) =>
