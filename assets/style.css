@@ -6,10 +6,9 @@
   --accent: #245f73;
   --soft: #eef5f7;
   --max: 820px;
-  --serif: Charter, "Bitstream Charter", Cambria, Georgia, "Times New Roman",
-    "Noto Serif SC", "Songti SC", SimSun, serif;
-  --sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  --serif: "Times New Roman", Times, "Noto Serif SC", "Songti SC", SimSun,
+    serif;
+  --sans: var(--serif);
 }
 
 * {
