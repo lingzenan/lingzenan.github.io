@@ -191,7 +191,7 @@ a.publication-title {
 }
 
 .content sup {
-  color: var(--accent);
+  color: inherit;
   font-family: var(--sans);
   font-size: 0.72em;
   font-weight: 700;
