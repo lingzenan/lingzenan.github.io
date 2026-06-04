@@ -175,7 +175,7 @@ a:hover {
 
 .publication-title {
   color: var(--accent);
-  font-weight: 700;
+  font-weight: 400;
 }
 
 a.publication-title {
@@ -200,6 +200,7 @@ a.publication-title {
 
 .publication-list sup,
 .publication-legend sup {
+  color: var(--text);
   font-weight: 700;
 }
 
