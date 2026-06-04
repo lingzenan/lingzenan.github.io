@@ -18,12 +18,13 @@ description: Assistant Professor
 ## About
 {: #about }
 
-I am an Assistant Professor. My research studies how to design, understand, and evaluate intelligent systems, with a particular interest in human-centered AI, computational social science, and interactive systems.
+I am currently an Assistant Professor in the School of Electronic Information and Communications (EIC) at Huazhong University of Science and Technology (HUST), China. I was previously a Boya Postdoctoral Fellow at the State Key Laboratory of General Artificial Intelligence, School of Intelligence Science and Technology, Peking University, hosted by [Prof. Zhouchen Lin](https://scholar.google.com/citations?user=TanjFwoAAAAJ&hl=zh-CN). I obtained my Ph.D. from the School of Electronic Information and Electrical Engineering (SEIEE), Shanghai Jiao Tong University, under the supervision of [Prof. Robert Caiming Qiu](https://scholar.google.com/citations?user=FTLNXX8AAAAJ&hl=zh-CN). I received my undergraduate degree from the Department of Mathematics at Nanjing University.
 
-I welcome inquiries from prospective undergraduate, master's, PhD, and visiting students whose interests connect with these areas. Please include a brief note about your background, research interests, and one or two questions you would like to explore.
 
 ## News
 {: #news }
 
-- 2026.01: News item or announcement.
-- 2025.12: News item or announcement.
+- 2026.05.02: Two papers were accepted to ICML 2026. Congratulations to Junchao and Jiayu!
+- 2025.09.19: One paper was accepted to NeurIPS 2025. Congratulations to Jiayu!
+- 2025.03.15: One paper was accepted by IEEE-TAP. Congratulations to Fuhai!
+- 2024.05.02: One paper was accepted to ICML 2024.
