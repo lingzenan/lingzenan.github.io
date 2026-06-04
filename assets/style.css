@@ -6,7 +6,7 @@
   --accent: #245f73;
   --soft: #eef5f7;
   --max: 820px;
-  --serif: Optima, Candara, Calibri, Arial, "Noto Sans SC", "Microsoft YaHei",
+  --serif: Candara, Optima, Calibri, Arial, "Noto Sans SC", "Microsoft YaHei",
     sans-serif;
   --sans: var(--serif);
 }
@@ -198,6 +198,11 @@ a.publication-title {
   line-height: 0;
 }
 
+.publication-list sup,
+.publication-legend sup {
+  font-weight: 700;
+}
+
 .publication-legend {
   color: var(--muted);
   font-family: var(--sans);
@@ -211,7 +216,7 @@ a.publication-title {
 
 .content .publication-venue em {
   color: var(--text);
-  font-style: italic;
+  font-style: normal;
 }
 
 .publication-abbr {
