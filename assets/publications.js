@@ -13,6 +13,10 @@ const conferenceVenues = [
   "iccv",
   "association for computational linguistics",
   "acl",
+  "ieee global communications conference",
+  "globecom",
+  "ieee international conference on communications",
+  "icc",
 ];
 
 const venueAbbreviations = [
@@ -23,6 +27,10 @@ const venueAbbreviations = [
   ["icassp", "ICASSP"],
   ["proceedings of the aaai conference on artificial intelligence", "AAAI"],
   ["international conference on artificial intelligence and statistics", "AISTATS"],
+  ["ieee global communications conference", "GLOBECOM"],
+  ["globecom", "GLOBECOM"],
+  ["ieee international conference on communications", "ICC"],
+  ["icc", "ICC"],
   ["ieee transactions on signal processing", "IEEE-TSP"],
   ["ieee transactions on cognitive communications and networking", "IEEE-TCCN"],
   ["ieee transactions on antennas and propagation", "IEEE-TAP"],
