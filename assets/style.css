@@ -6,8 +6,8 @@
   --accent: #245f73;
   --soft: #eef5f7;
   --max: 820px;
-  --serif: "Times New Roman", Times, "Noto Serif SC", "Songti SC", SimSun,
-    serif;
+  --serif: Optima, Candara, Calibri, Arial, "Noto Sans SC", "Microsoft YaHei",
+    sans-serif;
   --sans: var(--serif);
 }
 
@@ -174,7 +174,7 @@ a:hover {
 }
 
 .publication-title {
-  color: var(--text);
+  color: var(--accent);
   font-weight: 700;
 }
 

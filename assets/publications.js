@@ -191,9 +191,10 @@ const renderEntry = (entry) => {
   const fields = entry.fields;
   const authors = formatMarkedAuthors(fields);
   const title = escapeHtml(fields.title);
+  const quotedTitle = `"${title}"`;
   const titleHtml = fields.url
-    ? `<a class="publication-title" href="${escapeHtml(fields.url)}" target="_blank" rel="noreferrer">${title}</a>`
-    : `<span class="publication-title">${title}</span>`;
+    ? `<a class="publication-title" href="${escapeHtml(fields.url)}" target="_blank" rel="noreferrer">${quotedTitle}</a>`
+    : `<span class="publication-title">${quotedTitle}</span>`;
   const venue = escapeHtml(venueFor(entry));
   const year = escapeHtml(fields.year);
   const abbreviation = fields.abbr || abbreviationFor(venueFor(entry));
