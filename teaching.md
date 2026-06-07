@@ -7,5 +7,6 @@ permalink: /teaching/
 
 # Teaching
 
-- 2026 Spring: Course Title, undergraduate / graduate.
-- 2025 Fall: Course Title, undergraduate / graduate.
+- Spring: Probability and Stochastic Processes II, graduate.
+- Fall: Probability and Stochastic Processes II, graduate.
+- Fall: High-dimensional Signal Processing, undergraduate.
