@@ -17,6 +17,10 @@ const conferenceVenues = [
   "globecom",
   "ieee international conference on communications",
   "icc",
+  "european signal processing conference",
+  "eusipco",
+  "international joint conference on neural networks",
+  "ijcnn",
 ];
 
 const venueAbbreviations = [
@@ -31,6 +35,10 @@ const venueAbbreviations = [
   ["globecom", "GLOBECOM"],
   ["ieee international conference on communications", "ICC"],
   ["icc", "ICC"],
+  ["european signal processing conference", "EUSIPCO"],
+  ["eusipco", "EUSIPCO"],
+  ["international joint conference on neural networks", "IJCNN"],
+  ["ijcnn", "IJCNN"],
   ["ieee transactions on signal processing", "IEEE-TSP"],
   ["ieee transactions on cognitive communications and networking", "IEEE-TCCN"],
   ["ieee transactions on antennas and propagation", "IEEE-TAP"],
