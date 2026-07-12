@@ -154,12 +154,33 @@ const formatAuthors = (authors) =>
     )
     .join(", ");
 
-const authorMarks = (fields) => {
-  const marks = [];
-  const contribution = String(fields.contribution || "").toLowerCase();
+const normalizeAuthorName = (author) => formatAuthor(author).toLowerCase();
 
-  if (contribution.includes("co-first")) marks.push("*");
-  if (["true", "yes", "1"].includes(String(fields.corresponding).toLowerCase())) {
+const authorListField = (value) =>
+  String(value || "")
+    .split(/\s+and\s+|;/i)
+    .map((author) => normalizeAuthorName(author.trim()))
+    .filter(Boolean);
+
+const authorMarks = (fields, author) => {
+  const marks = [];
+  const normalizedAuthor = normalizeAuthorName(author);
+  const contribution = String(fields.contribution || "").toLowerCase();
+  const cofirstAuthors = authorListField(fields.cofirst || fields.equalcontribution);
+
+  if (
+    cofirstAuthors.includes(normalizedAuthor) ||
+    (cofirstAuthors.length === 0 &&
+      contribution.includes("co-first") &&
+      normalizedAuthor === "zenan ling")
+  ) {
+    marks.push("*");
+  }
+
+  if (
+    normalizedAuthor === "zenan ling" &&
+    ["true", "yes", "1"].includes(String(fields.corresponding).toLowerCase())
+  ) {
     marks.push("#");
   }
 
@@ -171,10 +192,11 @@ const formatMarkedAuthors = (fields) =>
     .split(/\s+and\s+/i)
     .map(formatAuthor)
     .map((author) => {
+      const marks = authorMarks(fields, author);
       if (author.toLowerCase() === "zenan ling") {
-        return `<strong>Zenan Ling</strong>${authorMarks(fields)}`;
+        return `<strong>Zenan Ling</strong>${marks}`;
       }
-      return escapeHtml(author);
+      return `${escapeHtml(author)}${marks}`;
     })
     .join(", ");
 
