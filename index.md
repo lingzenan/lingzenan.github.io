@@ -12,7 +12,7 @@ description: Assistant Professor
       Email: <a href="mailto:lingzenan@hust.edu.cn">lingzenan@hust.edu.cn</a><br>
     </p>
   </div>
-  <img class="profile-photo" src="{{ '/assets/profile-photo.png' | relative_url }}" alt="Portrait of Zenan Ling">
+  <img class="profile-photo" src="{{ '/assets/profile-photo-new.jpg' | relative_url }}" alt="Portrait of Zenan Ling">
 </div>
 
 ## About
