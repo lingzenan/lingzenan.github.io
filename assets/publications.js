@@ -286,7 +286,6 @@ fetch(window.PUBLICATIONS_BIB_URL)
     root.innerHTML = [
       renderGroup("Conference", conferences),
       renderGroup("Journals", journals),
-      '<p class="publication-legend"><sup>*</sup> co-first author. <sup>#</sup> corresponding author.</p>',
     ].join("");
   })
   .catch(() => {

@@ -25,9 +25,10 @@ My research primarily focuses on the theoretical and computational aspects of ma
 ## News
 {: #news }
 
+* 2026.08.24: One paper accepted to **IEEE-TPAMI**. Big Congrats to Junchao!
 * 2026.07.23: One paper accepted to **IEEE-TCCN**. Congrats to Huiying!
-* 2026.05.02: Two papers accepted to **ICML 2026**. Congrats to Junchao and Jiayu!
+* 2026.05.02: Two papers accepted to **ICML 2026**. Big Congrats to Junchao and Jiayu!
 * 2025.11.11: One paper accepted to **IEEE-TCCN**. Congrats to Huiying!
-* 2025.09.19: One paper accepted to **NeurIPS 2025**. Congrats to Jiayu!
+* 2025.09.19: One paper accepted to **NeurIPS 2025**. Big Congrats to Jiayu!
 * 2025.03.15: One paper accepted to **IEEE-TAP**. Congrats to Fuhai!
 * 2024.05.02: One paper accepted to **ICML 2024**.
