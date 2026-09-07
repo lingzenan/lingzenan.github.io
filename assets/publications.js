@@ -256,9 +256,20 @@ const renderEntry = (entry) => {
 };
 
 const renderGroup = (title, entries) => {
-  const sorted = [...entries].sort(
-    (a, b) => Number(b.fields.year || 0) - Number(a.fields.year || 0),
-  );
+  const publicationTime = (entry) => {
+    const fields = entry.fields;
+    const dateValue = fields.sortdate || fields.accepted || fields.date;
+    const dateTime = Date.parse(dateValue);
+    if (!Number.isNaN(dateTime)) return dateTime;
+
+    const year = Number(fields.year || 0);
+    return year ? Date.UTC(year, 0, 1) : 0;
+  };
+
+  const sorted = [...entries].sort((a, b) => {
+    const timeDiff = publicationTime(b) - publicationTime(a);
+    return timeDiff || 0;
+  });
 
   if (!sorted.length) {
     return `<h2>${title}</h2><p class="publication-status">No publications yet.</p>`;
